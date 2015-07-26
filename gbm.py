@@ -58,14 +58,7 @@ num = sum(S3_more_than_39)
 den = sum(mask2)+0.0
 E_S3_more_than_39 = num / den
 print('E(S3 | S3 > 39) = ' + str(E_S3_more_than_39))
-#Calculate P[S(3)> 39]
-mask = S3 > 39
-P_S3_more_than_39 = sum(mask)/n_path
-print('P(S3 > 39) = ' + str(P_S3_more_than_39))
 
-#Calculate E[S(3) | S(3) > 39]
-mask = S3 > 39                  #number of values more than 39 
-S3_more_than_39 = S3 * mask             #extracting values more than 39
-E_S3_more_than_39 = sum(S3_more_than_39) / sum(mask)
-print('E(S3 | S3 > 39) = ' + str(E_S3_more_than_39))
+
+
 
