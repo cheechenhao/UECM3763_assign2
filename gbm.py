@@ -46,19 +46,15 @@ print('Var(S3) = ' + str(Var_S3))
 #Calculate P[S(3)> 39]
 mask = S3 > 39
 non_zero=mask*S3
-num=sum(non_zero)
-den=sum(S3)+0.0
-P_S3_more_than_39 = num/den
+num1=np.count_nonzero(non_zero)
+den1=len(mask)
+P_S3_more_than_39 = num1/den1
 print('P(S3 > 39) = ' + str(P_S3_more_than_39))
 
 #Calculate E[S(3) | S(3) > 39]
 mask2 = S3 > 39                  #number of values more than 39 
 S3_more_than_39 = S3 * mask    #extracting values more than 39
-num = sum(S3_more_than_39)
-den = sum(mask2)+0.0
-E_S3_more_than_39 = num / den
+num2 = sum(S3_more_than_39)
+den2 = sum(mask2)+0.0
+E_S3_more_than_39 = num2/den2
 print('E(S3 | S3 > 39) = ' + str(E_S3_more_than_39))
-
-
-
-
